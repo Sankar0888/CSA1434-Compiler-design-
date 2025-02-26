@@ -1,0 +1,18 @@
+%{
+%}
+
+%%
+
+[0-1][0-8]{8} {printf("\nRgister Number Valid\n");}
+.+ {printf("\nRegister NUmber Invalid\n");}
+
+%%
+int yywrap(void) {}
+
+int main()
+{
+printf("\nEnter Register number:");
+yylex();
+printf("\n");
+return 0;
+}
