@@ -1,0 +1,14 @@
+%{
+%}
+
+%%
+
+[a-zA-Z][a-zA-Z0-9]+ {printf("\n%s is IDENTIFIER",yytext);}
+.+ {printf("\n% is NOT AN IDENTIFIER",yytext);}
+
+%%
+int yywrap(){}
+int main()
+{
+	while(yylex());
+}
